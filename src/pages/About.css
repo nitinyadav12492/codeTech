@@ -1,0 +1,355 @@
+.about-section {
+  width: 100%;
+
+  background: white;
+
+  color: #171717;
+}
+
+
+/* ============================= */
+/* ABOUT CONTAINER */
+/* ============================= */
+
+.about-container {
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 110px 6%;
+
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  gap: 90px;
+
+  align-items: center;
+}
+
+
+/* ============================= */
+/* IMAGE */
+/* ============================= */
+
+.about-image {
+  position: relative;
+}
+
+.about-image img {
+  width: 100%;
+
+  height: 500px;
+
+  object-fit: cover;
+
+  border-radius: 20px;
+}
+
+.about-experience {
+  position: absolute;
+
+  bottom: -25px;
+
+  right: -25px;
+
+  background: #3867d6;
+
+  color: white;
+
+  padding: 25px;
+
+  border-radius: 15px;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+.about-experience strong {
+  font-size: 30px;
+}
+
+.about-experience span {
+  font-size: 12px;
+
+  opacity: 0.8;
+}
+
+
+/* ============================= */
+/* CONTENT */
+/* ============================= */
+
+.about-content {
+  max-width: 600px;
+}
+
+.about-label {
+  color: #3867d6;
+
+  font-size: 12px;
+
+  letter-spacing: 3px;
+
+  font-weight: 700;
+}
+
+.about-content h2 {
+  font-size: 50px;
+
+  line-height: 1.1;
+
+  letter-spacing: -1.5px;
+
+  margin: 18px 0 25px;
+}
+
+.about-content h2 span {
+  color: #3867d6;
+
+  display: block;
+}
+
+.about-content p {
+  color: #6b7280;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+
+  margin-bottom: 18px;
+}
+
+.about-content .about-main-text {
+  font-size: 17px;
+
+  color: #444;
+}
+
+
+/* ============================= */
+/* POINTS */
+/* ============================= */
+
+.about-points {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 15px;
+
+  margin-top: 30px;
+}
+
+.about-points div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.about-points span {
+  width: 25px;
+
+  height: 25px;
+
+  border-radius: 50%;
+
+  background: #eaf0ff;
+
+  color: #3867d6;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 13px;
+
+  font-weight: bold;
+}
+
+.about-points p {
+  margin: 0;
+
+  font-size: 13px;
+}
+
+
+/* ============================= */
+/* MISSION */
+/* ============================= */
+
+.mission-section {
+  background: #f8f9fc;
+
+  padding: 100px 6%;
+}
+
+.mission-heading {
+  max-width: 650px;
+
+  margin: auto;
+
+  text-align: center;
+
+  margin-bottom: 60px;
+}
+
+.mission-heading span {
+  color: #3867d6;
+
+  font-size: 12px;
+
+  letter-spacing: 3px;
+
+  font-weight: 700;
+}
+
+.mission-heading h2 {
+  font-size: 45px;
+
+  margin: 15px 0;
+}
+
+.mission-heading h2 strong {
+  color: #3867d6;
+}
+
+.mission-heading p {
+  color: #777;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+
+/* ============================= */
+/* MISSION CARDS */
+/* ============================= */
+
+.mission-grid {
+  max-width: 1050px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+.mission-card {
+  background: white;
+
+  padding: 35px;
+
+  border-radius: 15px;
+
+  border: 1px solid #edf0f5;
+
+  transition: 0.3s ease;
+}
+
+.mission-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.07);
+}
+
+.mission-number {
+  color: #3867d6;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  margin-bottom: 30px;
+}
+
+.mission-card h3 {
+  font-size: 22px;
+
+  margin-bottom: 12px;
+}
+
+.mission-card p {
+  color: #777;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* ============================= */
+/* TABLET */
+/* ============================= */
+
+@media (max-width: 900px) {
+
+  .about-container {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+  .about-image {
+    max-width: 650px;
+  }
+
+  .mission-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media (max-width: 600px) {
+
+  .about-container {
+    padding: 80px 6%;
+  }
+
+  .about-image img {
+    height: 380px;
+  }
+
+  .about-experience {
+    right: 10px;
+
+    bottom: -20px;
+
+    padding: 18px;
+  }
+
+  .about-experience strong {
+    font-size: 25px;
+  }
+
+  .about-content h2 {
+    font-size: 40px;
+  }
+
+  .about-points {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-section {
+    padding: 80px 6%;
+  }
+
+  .mission-heading h2 {
+    font-size: 36px;
+  }
+
+}

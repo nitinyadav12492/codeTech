@@ -1,0 +1,504 @@
+.services-page {
+  width: 100%;
+  padding: 5px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.services-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 25px;
+}
+
+.services-header h1 {
+  margin: 0;
+
+  font-size: 28px;
+
+  color: #111827;
+}
+
+.services-header p {
+  margin: 6px 0 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+
+/* =========================
+   HEADER RIGHT
+========================= */
+
+.service-header-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.service-count {
+  background: white;
+
+  padding: 12px 18px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 8px;
+
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+.service-count strong {
+  margin-left: 6px;
+
+  color: #2563eb;
+
+  font-size: 16px;
+}
+
+
+/* =========================
+   ADD BUTTON
+========================= */
+
+.add-service-btn {
+  border: none;
+
+  background: #2563eb;
+
+  color: white;
+
+  padding: 12px 18px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.add-service-btn:hover {
+  background: #1d4ed8;
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+.services-table-container {
+  width: 100%;
+
+  background: white;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 12px;
+
+  overflow-x: auto;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.services-table {
+  width: 100%;
+
+  min-width: 900px;
+
+  border-collapse: collapse;
+}
+
+.services-table thead {
+  background: #f8fafc;
+}
+
+.services-table th {
+  padding: 16px 18px;
+
+  text-align: left;
+
+  color: #64748b;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.services-table td {
+  padding: 17px 18px;
+
+  color: #374151;
+
+  font-size: 14px;
+
+  border-bottom: 1px solid #f1f5f9;
+
+  vertical-align: top;
+}
+
+.services-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.services-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* =========================
+   SERVICE NAME
+========================= */
+
+.service-name {
+  color: #111827 !important;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.service-description {
+  max-width: 350px;
+
+  line-height: 1.5;
+
+  color: #6b7280 !important;
+}
+
+
+/* =========================
+   PRICE
+========================= */
+
+.service-price {
+  color: #15803d !important;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+
+/* =========================
+   ACTIONS
+========================= */
+
+.service-actions {
+  display: flex;
+
+  gap: 8px;
+}
+
+.service-edit-btn,
+.service-delete-btn {
+  border: none;
+
+  padding: 7px 12px;
+
+  border-radius: 6px;
+
+  font-size: 13px;
+
+  cursor: pointer;
+}
+
+.service-edit-btn {
+  background: #eff6ff;
+
+  color: #2563eb;
+
+  border: 1px solid #bfdbfe;
+}
+
+.service-edit-btn:hover {
+  background: #2563eb;
+
+  color: white;
+}
+
+.service-delete-btn {
+  background: #fef2f2;
+
+  color: #dc2626;
+
+  border: 1px solid #fecaca;
+}
+
+.service-delete-btn:hover {
+  background: #dc2626;
+
+  color: white;
+}
+
+
+/* =========================
+   EMPTY
+========================= */
+
+.no-services {
+  padding: 50px;
+
+  text-align: center;
+
+  color: #6b7280;
+}
+
+
+/* =========================
+   LOADING
+========================= */
+
+.services-loading {
+  padding: 50px;
+
+  text-align: center;
+
+  color: #2563eb;
+
+  font-size: 18px;
+}
+
+
+/* =========================
+   ERROR
+========================= */
+
+.services-error {
+  padding: 20px;
+
+  background: #fef2f2;
+
+  color: #dc2626;
+
+  border: 1px solid #fecaca;
+
+  border-radius: 8px;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.service-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  z-index: 1000;
+
+  padding: 20px;
+}
+
+.service-modal {
+  width: 100%;
+
+  max-width: 500px;
+
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  background: white;
+
+  border-radius: 12px;
+
+  padding: 25px;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Modal Header */
+
+.service-modal-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 22px;
+}
+
+.service-modal-header h2 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 22px;
+}
+
+.service-close-btn {
+  width: 32px;
+
+  height: 32px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #f3f4f6;
+
+  font-size: 22px;
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.service-form-group {
+  margin-bottom: 17px;
+}
+
+.service-form-group label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #374151;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+.service-form-group input,
+.service-form-group textarea {
+  width: 100%;
+
+  padding: 11px 13px;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 7px;
+
+  outline: none;
+
+  font-family: inherit;
+
+  font-size: 14px;
+}
+
+.service-form-group textarea {
+  min-height: 90px;
+
+  resize: vertical;
+}
+
+.service-form-group input:focus,
+.service-form-group textarea:focus {
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* =========================
+   MODAL BUTTONS
+========================= */
+
+.service-modal-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  margin-top: 25px;
+}
+
+.service-cancel-btn,
+.service-save-btn {
+  padding: 10px 17px;
+
+  border-radius: 7px;
+
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.service-cancel-btn {
+  background: #f3f4f6;
+
+  color: #374151;
+
+  border: 1px solid #d1d5db;
+}
+
+.service-save-btn {
+  background: #2563eb;
+
+  color: white;
+
+  border: 1px solid #2563eb;
+}
+
+.service-save-btn:hover {
+  background: #1d4ed8;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .services-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  .service-header-right {
+    width: 100%;
+
+    flex-wrap: wrap;
+  }
+
+  .service-count {
+    flex: 1;
+  }
+
+  .add-service-btn {
+    flex: 1;
+  }
+
+}

@@ -1,0 +1,329 @@
+
+/* =========================================
+   ADMIN LAYOUT
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.admin-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  background: #f5f7fb;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+.sidebar {
+  width: 250px;
+  min-height: 100vh;
+
+  position: sticky;
+  top: 0;
+
+  align-self: flex-start;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #111827;
+  color: #ffffff;
+
+  border-right: 1px solid #1f2937;
+
+  z-index: 10;
+}
+
+/* =========================================
+   BRAND
+========================================= */
+
+.sidebar-brand {
+  height: 76px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 22px;
+
+  border-bottom: 1px solid #1f2937;
+}
+
+.brand-badge {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 11px;
+
+  border-radius: 10px;
+
+  background: #2563eb;
+
+  color: #ffffff;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+}
+
+.brand-title {
+  margin: 0;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  letter-spacing: -0.3px;
+
+  color: #ffffff;
+}
+
+.brand-title span {
+  color: #60a5fa;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.sidebar-nav {
+  padding: 24px 14px;
+}
+
+.nav-list {
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.nav-list li {
+  width: 100%;
+}
+
+
+/* =========================================
+   NAV LINK
+========================================= */
+
+.nav-link {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 13px 15px;
+
+  border-radius: 9px;
+
+  text-decoration: none;
+
+  color: #9ca3af;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.nav-link:hover {
+  background: #1f2937;
+
+  color: #ffffff;
+
+  transform: translateX(2px);
+}
+
+
+/* =========================================
+   ACTIVE LINK
+========================================= */
+
+.nav-link.active {
+  background: #2563eb;
+
+  color: #ffffff;
+
+  font-weight: 600;
+
+  box-shadow:
+    0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.nav-link.active:hover {
+  background: #2563eb;
+
+  transform: none;
+}
+
+
+/* Active left indicator */
+
+.nav-link.active::before {
+  content: "";
+
+  position: absolute;
+
+  left: -14px;
+
+  top: 50%;
+
+  width: 3px;
+  height: 24px;
+
+  transform: translateY(-50%);
+
+  background: #60a5fa;
+
+  border-radius: 0 4px 4px 0;
+}
+
+
+/* =========================================
+   ICONS
+========================================= */
+
+.nav-icon {
+  width: 20px;
+  height: 20px;
+
+  flex-shrink: 0;
+
+  transition: transform 0.2s ease;
+}
+
+.nav-link:hover .nav-icon {
+  transform: scale(1.08);
+}
+
+.nav-link.active .nav-icon {
+  color: #ffffff;
+}
+
+
+/* =========================================
+   MAIN WRAPPER
+========================================= */
+
+.main-wrapper {
+  flex: 1;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+  padding: 30px;
+  background: #f5f7fb;
+}
+/* =========================================
+   COMMON ADMIN CONTENT
+========================================= */
+
+.main-content > * {
+  width: 100%;
+}
+
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+.sidebar::-webkit-scrollbar,
+.main-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track,
+.main-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #374151;
+
+  border-radius: 10px;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+
+  border-radius: 10px;
+}
+
+
+/* =========================================
+   TABLE RESPONSIVE SUPPORT
+========================================= */
+
+.main-content table {
+  max-width: 100%;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 220px;
+  }
+
+  .main-content {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    width: 70px;
+  }
+
+  .sidebar-brand {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .brand-title {
+    display: none;
+  }
+
+  .nav-link {
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    padding: 0;
+    margin: auto;
+    font-size: 0;
+  }
+
+  .main-content {
+    padding: 18px;
+  }
+}

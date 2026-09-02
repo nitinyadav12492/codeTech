@@ -1,0 +1,267 @@
+.contacts-page {
+  width: 100%;
+  padding: 5px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.contacts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 25px;
+}
+
+.contacts-header h1 {
+  margin: 0;
+
+  font-size: 28px;
+
+  color: #111827;
+}
+
+.contacts-header p {
+  margin: 6px 0 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+
+/* =========================
+   CONTACT COUNT
+========================= */
+
+.contact-count {
+  background: #ffffff;
+
+  padding: 12px 18px;
+
+  border-radius: 8px;
+
+  border: 1px solid #e5e7eb;
+
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+.contact-count strong {
+  color: #2563eb;
+
+  margin-left: 6px;
+
+  font-size: 16px;
+}
+
+
+/* =========================
+   TABLE CONTAINER
+========================= */
+
+.contacts-table-container {
+  width: 100%;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  border: 1px solid #e5e7eb;
+
+  overflow-x: auto;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+.contacts-table {
+  width: 100%;
+
+  min-width: 800px;
+
+  border-collapse: collapse;
+}
+
+
+/* =========================
+   TABLE HEADER
+========================= */
+
+.contacts-table thead {
+  background: #f8fafc;
+}
+
+.contacts-table th {
+  padding: 16px 18px;
+
+  text-align: left;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  color: #64748b;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+
+/* =========================
+   TABLE DATA
+========================= */
+
+.contacts-table td {
+  padding: 17px 18px;
+
+  font-size: 14px;
+
+  color: #374151;
+
+  border-bottom: 1px solid #f1f5f9;
+
+  vertical-align: top;
+}
+
+
+/* Hover */
+
+.contacts-table tbody tr {
+  transition: 0.2s ease;
+}
+
+.contacts-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+
+/* Last row */
+
+.contacts-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* =========================
+   USERNAME
+========================= */
+
+.contact-name {
+  font-weight: 600;
+
+  color: #111827 !important;
+
+  white-space: nowrap;
+}
+
+
+/* =========================
+   EMAIL
+========================= */
+
+.contact-email {
+  color: #2563eb !important;
+
+  white-space: nowrap;
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.contact-message {
+  max-width: 450px;
+
+  line-height: 1.5;
+
+  color: #4b5563 !important;
+}
+
+
+/* =========================
+   NO CONTACT
+========================= */
+
+.no-contacts {
+  padding: 50px;
+
+  text-align: center;
+
+  color: #6b7280;
+
+  font-size: 15px;
+}
+
+
+/* =========================
+   LOADING
+========================= */
+
+.contacts-loading {
+  padding: 50px;
+
+  text-align: center;
+
+  color: #2563eb;
+
+  font-size: 18px;
+
+  font-weight: 500;
+}
+
+
+/* =========================
+   ERROR
+========================= */
+
+.contacts-error {
+  padding: 20px;
+
+  background: #fef2f2;
+
+  color: #dc2626;
+
+  border: 1px solid #fecaca;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .contacts-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  .contacts-header h1 {
+    font-size: 24px;
+  }
+
+  .contact-count {
+    width: 100%;
+  }
+
+  .contacts-table-container {
+    overflow-x: auto;
+  }
+
+}

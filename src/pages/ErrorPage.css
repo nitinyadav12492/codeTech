@@ -1,0 +1,336 @@
+.error-page {
+  min-height: 100vh;
+  width: 100%;
+
+  background: #f8f9fc;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 6%;
+
+  overflow: hidden;
+}
+
+.error-container {
+  width: 100%;
+  max-width: 1100px;
+
+  min-height: 600px;
+
+  background: #ffffff;
+
+  border: 1px solid #e9ecf2;
+
+  border-radius: 25px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
+}
+
+
+/* ============================= */
+/* 404 NUMBER */
+/* ============================= */
+
+.error-number {
+  position: absolute;
+
+  top: -45px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  font-size: 250px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  color: #f2f4f8;
+
+  user-select: none;
+}
+
+
+/* ============================= */
+/* CONTENT */
+/* ============================= */
+
+.error-content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 600px;
+
+  padding: 40px 20px;
+}
+
+.error-label {
+  display: inline-block;
+
+  color: #3867d6;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 20px;
+}
+
+.error-content h1 {
+  color: #171717;
+
+  font-size: clamp(40px, 5vw, 60px);
+
+  line-height: 1.1;
+
+  letter-spacing: -2px;
+
+  margin: 0 0 20px;
+}
+
+.error-content h1 span {
+  display: block;
+
+  color: #3867d6;
+}
+
+.error-content p {
+  color: #777;
+
+  max-width: 520px;
+
+  margin: 0 auto 30px;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+/* ============================= */
+/* BUTTONS */
+/* ============================= */
+
+.error-buttons {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+.error-home-btn,
+.error-course-btn {
+  padding: 14px 24px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.error-home-btn {
+  border: none;
+
+  background: #3867d6;
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.error-home-btn span {
+  font-size: 18px;
+
+  transition: 0.3s ease;
+}
+
+.error-home-btn:hover {
+  background: #2854c7;
+
+  transform: translateY(-3px);
+}
+
+.error-home-btn:hover span {
+  transform: translateX(4px);
+}
+
+.error-course-btn {
+  background: white;
+
+  color: #222;
+
+  border: 1px solid #d9dce3;
+}
+
+.error-course-btn:hover {
+  color: #3867d6;
+
+  border-color: #3867d6;
+
+  transform: translateY(-3px);
+}
+
+
+/* ============================= */
+/* DECORATION */
+/* ============================= */
+
+.error-decoration {
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+}
+
+.error-circle {
+  position: absolute;
+
+  border-radius: 50%;
+
+  border: 1px solid #e3e9f8;
+}
+
+.circle-one {
+  width: 300px;
+
+  height: 300px;
+
+  left: -150px;
+
+  bottom: -150px;
+}
+
+.circle-two {
+  width: 200px;
+
+  height: 200px;
+
+  right: -100px;
+
+  top: 40px;
+}
+
+.circle-three {
+  width: 80px;
+
+  height: 80px;
+
+  right: 100px;
+
+  bottom: 50px;
+
+  background: #edf2ff;
+
+  border: none;
+}
+
+
+/* ============================= */
+/* TABLET */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  .error-page {
+    padding: 25px;
+  }
+
+  .error-container {
+    min-height: 550px;
+  }
+
+  .error-number {
+    font-size: 180px;
+
+    top: 20px;
+  }
+
+  .error-content {
+    padding-top: 100px;
+  }
+
+}
+
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media (max-width: 500px) {
+
+  .error-page {
+    padding: 15px;
+  }
+
+  .error-container {
+    min-height: 550px;
+
+    border-radius: 18px;
+  }
+
+  .error-number {
+    font-size: 130px;
+
+    top: 50px;
+  }
+
+  .error-content h1 {
+    font-size: 38px;
+
+    letter-spacing: -1px;
+  }
+
+  .error-content p {
+    font-size: 14px;
+  }
+
+  .error-buttons {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .error-home-btn,
+  .error-course-btn {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  .circle-one {
+    width: 200px;
+    height: 200px;
+
+    left: -100px;
+    bottom: -100px;
+  }
+
+}

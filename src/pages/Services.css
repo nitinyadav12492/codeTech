@@ -1,0 +1,157 @@
+.service-section {
+  padding: 80px 20px;
+  background: #f7f9fc;
+  min-height: 100vh;
+}
+
+.service-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.service-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.service-subtitle {
+  color: #2563eb;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.service-heading h1 {
+  font-size: 42px;
+  margin: 0 0 15px;
+  color: #111827;
+}
+
+.service-heading > p:last-child {
+  max-width: 650px;
+  margin: auto;
+  color: #6b7280;
+  line-height: 1.7;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.service-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #e5e7eb;
+  transition: 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.service-icon {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eff6ff;
+  border-radius: 12px;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.service-card h2 {
+  color: #111827;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.service-description {
+  color: #6b7280;
+  line-height: 1.6;
+  min-height: 75px;
+}
+
+.service-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 25px 0;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.service-info div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.service-info span {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.service-info strong {
+  color: #111827;
+  font-size: 14px;
+}
+
+.service-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.service-btn:hover {
+  background: #1d4ed8;
+}
+
+.service-loading,
+.service-error {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-error h2 {
+  color: #dc2626;
+}
+
+.service-error button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-heading h1 {
+    font-size: 32px;
+  }
+}
