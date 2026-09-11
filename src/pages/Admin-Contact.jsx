@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useAuth } from "../store/auth";
+import { API_URL } from "../config";
 import "./Admin-Contact.css";
 
 const AdminContacts = () => {
@@ -15,7 +16,7 @@ const AdminContacts = () => {
       setError("");
 
       const response = await fetch(
-        "http://localhost:3000/api/admin/contacts",
+        `${API_URL}/api/admin/contacts`,
         {
           method: "GET",
           headers: {

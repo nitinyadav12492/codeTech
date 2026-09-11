@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useAuth } from "../store/auth";
+import { API_URL } from "../config";
 import "./Admin-Services.css";
 
 const AdminServices = () => {
@@ -32,7 +33,7 @@ const AdminServices = () => {
       setLoading(true);
 
       const response = await fetch(
-        "http://localhost:3000/api/admin/services",
+        `${API_URL}/api/admin/services`,
         {
           method: "GET",
           headers: {
@@ -83,7 +84,7 @@ const AdminServices = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:3000/api/admin/services",
+        `${API_URL}/api/admin/services`,
         {
           method: "POST",
 
@@ -141,7 +142,7 @@ const AdminServices = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:3000/api/admin/services/${id}`,
+        `${API_URL}/api/admin/services/${id}`,
         {
           method: "DELETE",
 
@@ -197,7 +198,7 @@ const AdminServices = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:3000/api/admin/services/${editingService._id}`,
+        `${API_URL}/api/admin/services/${editingService._id}`,
         {
           method: "PATCH",
 

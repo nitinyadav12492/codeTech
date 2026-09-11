@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { API_URL } from "../config";
 import "./Contact.css";
 import {useAuth} from "../store/auth"
 
@@ -40,7 +41,7 @@ const Contact = () => {
   const handleSubmit = async(e) => {
     e.preventDefault();
 try{
-const response = await fetch("http://localhost:3000/api/form/contact",{
+const response = await fetch(`${API_URL}/api/form/contact`,{
   method:"POST",
   headers:{
     'Content-Type':"application/json"

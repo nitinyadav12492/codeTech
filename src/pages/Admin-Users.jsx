@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useAuth } from "../store/auth";
+import { API_URL } from "../config";
 import "./Admin-Users.css";
 
 const AdminUsers = () => {
@@ -22,7 +23,7 @@ const AdminUsers = () => {
       setError("");
 
       const response = await fetch(
-        "http://localhost:3000/api/admin/users",
+        `${API_URL}/api/admin/users`,
         {
           method: "GET",
           headers: {
@@ -64,7 +65,7 @@ const AdminUsers = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:3000/api/admin/users/${id}`,
+        `${API_URL}/api/admin/users/${id}`,
         {
           method: "DELETE",
           headers: {
@@ -111,7 +112,7 @@ const AdminUsers = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:3000/api/admin/users/${editingUser._id}`,
+        `${API_URL}/api/admin/users/${editingUser._id}`,
         {
           method: "PATCH",
           headers: {

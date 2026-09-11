@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { createContext, useContext, useState } from "react";
+import { API_URL } from "../config";
 
 export const AuthContext = createContext();
 
@@ -32,7 +33,7 @@ const isLoggedIn = !!token;
         return;
       }
 
-      const response = await fetch("http://localhost:3000/api/auth/user", {
+      const response = await fetch(`${API_URL}/api/auth/user`, {
         method: "GET",
         headers: {
           Authorization:  authorizationToken,
@@ -58,7 +59,7 @@ const isLoggedIn = !!token;
   //to fetch service
   const getServices = async() =>{
     try{
-      const response = await fetch("http://localhost:3000/api/admin/services", {
+      const response = await fetch(`${API_URL}/api/admin/services`, {
         method: "GET",
       });
 

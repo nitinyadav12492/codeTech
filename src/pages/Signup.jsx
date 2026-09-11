@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { API_URL } from "../config";
 import "./Signup.css";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../store/auth.jsx";
@@ -29,7 +30,7 @@ const Signup = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:3000/api/auth/register",
+        `${API_URL}/api/auth/register`,
         {
           method: "POST",
           headers: {
