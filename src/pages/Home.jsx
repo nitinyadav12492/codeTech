@@ -1,236 +1,331 @@
 import React from "react";
+import {
+  FaArrowRight,
+  FaCode,
+  FaGraduationCap,
+  FaLaptopCode,
+  FaMobileAlt,
+  FaRocket,
+  FaStar,
+  FaTerminal,
+} from "react-icons/fa";
+
 import "./Home.css";
-import { FaGraduationCap } from "react-icons/fa";
-import { FaLaptopCode, FaMobileAlt,  } from "react-icons/fa";
-import { FaRocket } from "react-icons/fa";
-import { FaStar,  } from "react-icons/fa";
-import { FaUser,  } from "react-icons/fa";
-// import Weather from "../Components/Weather";
+
+const STATS = [
+  {
+    value: "10",
+    suffix: "K+",
+    label: "Active learners",
+  },
+  {
+    value: "50",
+    suffix: "+",
+    label: "Practical courses",
+  },
+  {
+    value: "30",
+    suffix: "+",
+    label: "Industry mentors",
+  },
+  {
+    value: "4.9",
+    suffix: "",
+    label: "Average rating",
+  },
+];
+
+const FEATURES = [
+  {
+    number: "01",
+    icon: <FaGraduationCap />,
+    title: "Learn from builders",
+    description:
+      "Get practical guidance from people who have shipped products in the real world.",
+    dark: true,
+  },
+  {
+    number: "02",
+    icon: <FaLaptopCode />,
+    title: "Make real things",
+    description:
+      "Turn every lesson into a project you can use, share, and be proud of.",
+  },
+  {
+    number: "03",
+    icon: <FaMobileAlt />,
+    title: "Learn your way",
+    description:
+      "Short, focused sessions that fit the way modern developers actually work.",
+  },
+  {
+    number: "04",
+    icon: <FaRocket />,
+    title: "Move with confidence",
+    description:
+      "Build the skills, portfolio, and momentum to take your next step.",
+  },
+];
 
 const Home = () => {
   return (
-    <main>
+    <main className="home-page">
 
-    
+      {/* ================= HERO ================= */}
+
       <section className="hero-section">
+        <div className="hero-grid-pattern"></div>
 
         <div className="hero-container">
 
-       
+          {/* Hero Content */}
           <div className="hero-content">
 
-            <div className="hero-badge">
-              Learn. Grow. Succeed.
+            <div className="eyebrow">
+              <span className="eyebrow-dot"></span>
+              The modern way to learn tech
             </div>
 
             <h1>
-              Learn Skills That
-              <span> Build Your Future.</span>
+              Build what
+              <br />
+              <em>matters.</em>
             </h1>
 
             <p>
-              Learn practical and industry-ready skills from expert
-              instructors. Master new technologies, build real projects,
-              and take your career to the next level.
+              CodeTech turns curious minds into confident builders with
+              focused courses, real projects, and a community that keeps
+              you moving.
             </p>
 
             <div className="hero-buttons">
 
-              <a href="/services" className="hero-primary-btn">
-                Explore Courses
-                <span>→</span>
+              <a
+                href="/services"
+                className="hero-primary-btn"
+              >
+                Explore learning paths
+                <FaArrowRight />
               </a>
 
-              <a href="#about" className="hero-secondary-btn">
-                Learn More
+              <a
+                href="#why-codetech"
+                className="hero-secondary-btn"
+              >
+                <FaTerminal />
+                See how it works
               </a>
 
             </div>
 
-            {/* Trust */}
             <div className="hero-trust">
+              <span>Trusted by</span>
 
-              <div className="avatars">
-                <div><FaUser className="text-blue-600" /></div>
-                <div><FaUser className="text-blue-600" /></div>
-                <div><FaUser className="text-blue-600" /></div>
-                <div><FaUser className="text-blue-600" /></div>
-              </div>
+              <strong>
+                10,000+ ambitious developers
+              </strong>
 
-              <div>
-                <strong>10,000+</strong>
-                <p>Students learning with us</p>
-              </div>
-
+              <span className="trust-line"></span>
             </div>
 
           </div>
 
+          {/* Hero Visual */}
+          <div
+            className="hero-visual"
+            aria-label="CodeTech learning platform preview"
+          >
 
-          {/* Right Visual */}
-          <div className="hero-image-wrapper">
+            <div className="visual-orbit orbit-one"></div>
+            <div className="visual-orbit orbit-two"></div>
 
-            <div className="hero-image-card">
+            {/* Code Window */}
+            <div className="code-window">
 
-              <img
-                src="/dp.png"
-                alt="Students learning"
-              />
+              <div className="window-bar">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <b>codetech / roadmap.js</b>
+
+              </div>
+
+              <div className="code-body">
+
+                <span className="line-number">01</span>
+
+                <code>
+                  <i>const</i>{" "}
+                  <strong>future</strong> ={" "}
+                  <em>build</em>{"{"}
+                </code>
+
+                <span className="line-number">02</span>
+
+                <code>
+                  &nbsp;&nbsp;skill:{" "}
+                  <mark>"full-stack"</mark>,
+                </code>
+
+                <span className="line-number">03</span>
+
+                <code>
+                  &nbsp;&nbsp;practice:{" "}
+                  <mark>true</mark>,
+                </code>
+
+                <span className="line-number">04</span>
+
+                <code>
+                  &nbsp;&nbsp;community:{" "}
+                  <mark>"always-on"</mark>
+                </code>
+
+                <span className="line-number">05</span>
+
+                <code>
+                  {"});"}
+                </code>
+
+                <span className="cursor"></span>
+
+              </div>
+
+              <div className="window-footer">
+
+                <span>
+                  <FaCode />
+                  main
+                </span>
+
+                <span>
+                  ● synced just now
+                </span>
+
+              </div>
 
             </div>
 
-          
+            {/* Course Badge */}
+            <div className="visual-badge badge-course">
 
-            <div className="floating-card course-card">
+              <FaLaptopCode />
 
-              <div className="floating-icon">
-                📚
-              </div>
-
-              <div>
-                <span>Courses</span>
-                <strong>50+</strong>
-              </div>
+              <span>
+                50+
+                <small>courses</small>
+              </span>
 
             </div>
 
+            {/* Rating Badge */}
+            <div className="visual-badge badge-rating">
 
-            <div className="floating-card student-card">
+              <FaStar />
 
-              <div className="student-icon">
-                <FaStar className="text-yellow-400 text-2xl" />
-              </div>
-
-              <div>
-                <strong>4.9/5</strong>
-                <span>Student Rating</span>
-              </div>
+              <span>
+                4.9
+                <small>learner rating</small>
+              </span>
 
             </div>
+
+            <img
+              className="hero-mark"
+              src="/dp.png"
+              alt=""
+            />
 
           </div>
 
         </div>
-
       </section>
 
 
-     
+      {/* ================= STATS ================= */}
 
       <section className="stats-section">
 
         <div className="stats-container">
 
-          <div className="stat">
-            <h2>10K+</h2>
-            <p>Active Students</p>
-          </div>
+          {STATS.map((stat) => (
+            <div
+              className="stat"
+              key={stat.label}
+            >
 
-          <div className="stat">
-            <h2>50+</h2>
-            <p>Professional Courses</p>
-          </div>
+              <h2>
+                {stat.value}
+                <span>{stat.suffix}</span>
+              </h2>
 
-          <div className="stat">
-            <h2>30+</h2>
-            <p>Expert Instructors</p>
-          </div>
+              <p>{stat.label}</p>
 
-          <div className="stat">
-            <h2>4.9</h2>
-            <p>Average Rating</p>
-          </div>
+            </div>
+          ))}
 
         </div>
 
       </section>
 
 
-      {/* ================= WHY US ================= */}
+      {/* ================= WHY CODETECH ================= */}
 
-      <section className="why-section">
+      <section
+        className="why-section"
+        id="why-codetech"
+      >
 
         <div className="why-heading">
 
-          <span>WHY CHOOSE US</span>
+          <div>
 
-          <h2>
-            Everything You Need
-            <br />
-            <strong>To Learn Better.</strong>
-          </h2>
+            <span className="section-kicker">
+              WHY CODETECH
+            </span>
+
+            <h2>
+              Learning that ships
+              <br />
+              <em>with you.</em>
+            </h2>
+
+          </div>
 
           <p>
-            We make learning simple, practical and accessible for everyone.
+            No endless theory. Just a clear path from your first
+            line of code to your next opportunity.
           </p>
 
         </div>
 
 
+        {/* Feature Cards */}
+
         <div className="feature-grid">
 
-          <div className="feature-card">
+          {FEATURES.map((feature) => (
+            <div
+              key={feature.number}
+              className={`feature-card ${
+                feature.dark ? "feature-card-dark" : ""
+              }`}
+            >
 
-            <div className="feature-icon">
-              <FaGraduationCap className="text-xl" />
+              <div className="feature-icon">
+                {feature.icon}
+              </div>
+
+              <span>{feature.number}</span>
+
+              <h3>{feature.title}</h3>
+
+              <p>{feature.description}</p>
+
             </div>
-
-            <h3>Expert Instructors</h3>
-
-            <p>
-              Learn from experienced professionals who understand
-              real-world industry requirements.
-            </p>
-
-          </div>
-
-
-          <div className="feature-card">
-
-            <div className="feature-icon">
-              <FaLaptopCode className="text-blue-500" />
-            </div>
-
-            <h3>Practical Learning</h3>
-              <FaMobileAlt className="text-green-500" />
-            <p>
-              Work on real projects and practical exercises instead
-              of only watching theoretical lectures.
-            </p>
-
-          </div>
-
-
-          <div className="feature-card">
-
-            <div className="feature-icon">
-              📱
-            </div>
-
-            <h3>Learn Anywhere</h3>
-
-            <p>
-              Access your courses anytime and continue learning
-              from wherever you are.
-            </p>
-
-          </div>
-
-
-          <div className="feature-card">
-
-            <div className="feature-icon">
-           <FaRocket className="text-xl" />
-            </div>
-
-            <h3>Career Focused</h3>
-
-            <p>
-              Build skills that help you prepare for internships,
-              jobs and your professional career.
-            </p>
-
-          </div>
+          ))}
 
         </div>
 

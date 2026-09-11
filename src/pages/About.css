@@ -1,9 +1,15 @@
 .about-section {
+  --paper: #fffefa;
+  --paper-soft: #f3efe6;
+  --border: #e8e1d6;
+  --text: #332f29;
+  --text-soft: #817a70;
+
   width: 100%;
 
-  background: white;
+  background: var(--paper);
 
-  color: #171717;
+  color: var(--text);
 }
 
 
@@ -53,9 +59,9 @@
 
   right: -25px;
 
-  background: #3867d6;
+  background: var(--paper-soft);
 
-  color: white;
+  color: var(--text);
 
   padding: 25px;
 
@@ -86,7 +92,7 @@
 }
 
 .about-label {
-  color: #3867d6;
+  color: var(--text-soft);
 
   font-size: 12px;
 
@@ -106,7 +112,7 @@
 }
 
 .about-content h2 span {
-  color: #3867d6;
+  color: #8d8579;
 
   display: block;
 }
@@ -157,9 +163,9 @@
 
   border-radius: 50%;
 
-  background: #eaf0ff;
+  background: var(--paper-soft);
 
-  color: #3867d6;
+  color: var(--text);
 
   display: flex;
 
@@ -184,7 +190,7 @@
 /* ============================= */
 
 .mission-section {
-  background: #f8f9fc;
+  background: #f3efe6;
 
   padding: 100px 6%;
 }
@@ -200,7 +206,7 @@
 }
 
 .mission-heading span {
-  color: #3867d6;
+  color: var(--text-soft);
 
   font-size: 12px;
 
@@ -216,7 +222,7 @@
 }
 
 .mission-heading h2 strong {
-  color: #3867d6;
+  color: #8d8579;
 }
 
 .mission-heading p {
@@ -245,13 +251,13 @@
 }
 
 .mission-card {
-  background: white;
+  background: #fffefa;
 
   padding: 35px;
 
   border-radius: 15px;
 
-  border: 1px solid #edf0f5;
+  border: 1px solid #e8e1d6;
 
   transition: 0.3s ease;
 }
@@ -263,7 +269,7 @@
 }
 
 .mission-number {
-  color: #3867d6;
+  color: #8d8579;
 
   font-size: 13px;
 

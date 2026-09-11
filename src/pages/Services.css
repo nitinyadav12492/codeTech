@@ -1,6 +1,12 @@
 .service-section {
+  --paper: #fffefa;
+  --paper-soft: #f3efe6;
+  --border: #e8e1d6;
+  --text: #332f29;
+  --text-soft: #817a70;
+
   padding: 80px 20px;
-  background: #f7f9fc;
+  background: var(--paper);
   min-height: 100vh;
 }
 
@@ -15,7 +21,7 @@
 }
 
 .service-subtitle {
-  color: #2563eb;
+  color: var(--text-soft);
   font-weight: 600;
   letter-spacing: 2px;
   margin-bottom: 10px;
@@ -24,7 +30,7 @@
 .service-heading h1 {
   font-size: 42px;
   margin: 0 0 15px;
-  color: #111827;
+  color: var(--text);
 }
 
 .service-heading > p:last-child {
@@ -41,10 +47,10 @@
 }
 
 .service-card {
-  background: white;
+  background: #fffefa;
   padding: 30px;
   border-radius: 15px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--border);
   transition: 0.3s ease;
 }
 
@@ -59,14 +65,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #eff6ff;
+  background: var(--paper-soft);
   border-radius: 12px;
   font-size: 25px;
   margin-bottom: 20px;
 }
 
 .service-card h2 {
-  color: #111827;
+  color: var(--text);
   font-size: 22px;
   margin-bottom: 15px;
 }
@@ -98,7 +104,7 @@
 }
 
 .service-info strong {
-  color: #111827;
+  color: var(--text);
   font-size: 14px;
 }
 
@@ -107,15 +113,15 @@
   padding: 12px;
   border: none;
   border-radius: 8px;
-  background: #2563eb;
-  color: white;
+  background: var(--paper-soft);
+  color: var(--text);
   font-size: 15px;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .service-btn:hover {
-  background: #1d4ed8;
+  background: #e8e1d6;
 }
 
 .service-loading,
@@ -135,8 +141,8 @@
   padding: 10px 20px;
   border: none;
   border-radius: 6px;
-  background: #2563eb;
-  color: white;
+  background: var(--paper-soft);
+  color: var(--text);
   cursor: pointer;
 }
 
