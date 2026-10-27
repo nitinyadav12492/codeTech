@@ -40,12 +40,27 @@ const Signup = () => {
         }
       );
 
-      const data = await response.json();
+      const responseBody = await response.text();
+      let data = {};
+
+      if (responseBody) {
+        try {
+          data = JSON.parse(responseBody);
+        } catch {
+          data = { message: responseBody };
+        }
+      }
 
       console.log("Server response:", data);
 
       if (!response.ok) {
-        throw new Error(data.message || "Signup failed");
+        throw new Error(
+          data.message ||
+            data.extraDetails ||
+            data.extaDetails ||
+            data.msg ||
+            "Signup failed"
+        );
       }
 
       alert("Signup successful! Please login to continue.");
